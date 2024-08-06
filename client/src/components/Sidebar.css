@@ -1,0 +1,66 @@
+.sidebar {
+  position: relative; /* Adicione isso para o indicador ser posicionado corretamente */
+  width: 250px;
+  height: 100vh;
+  background-color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  transition: width 0.3s ease;
+}
+
+.sidebar-logo img {
+  width: 200px; /* Ajuste conforme necessário */
+  margin-bottom: 30px;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.sidebar-button {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #34495e; /* Cor dos botões */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-button:hover {
+  background-color: #1abc9c; /* Cor ao passar o mouse */
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar-toggle-indicator {
+  position: absolute;
+  top: 50%;
+  right: -15px; /* Ajuste a posição à direita */
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #34495e;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.sidebar.collapsed .sidebar-toggle-indicator {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+

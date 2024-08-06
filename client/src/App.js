@@ -1,15 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Dash_Meli from './pages/Dash_Meli';
+import Sidebar from './components/sidebar.js';
+import './App.css';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Dash_Meli />} />
-        {/* Outras rotas podem ser adicionadas aqui */}
-      </Routes>
-    </Router>
+    <div className="app">
+      <Sidebar />
+      <div className="content">
+        {/* Aqui vai o restante do conteúdo do dashboard */}
+        <h1>Bem-vindo ao Dashboard</h1>
+      </div>
+    </div>
   );
 }
 
