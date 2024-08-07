@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Sidebar.css';
 import logo from '../assets/logo-temperare.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrophy, faMoneyBill, faBoxOpen, faArrowLeft, faArrowRight, faHandshake} from '@fortawesome/free-solid-svg-icons';
+import { faTrophy, faMoneyBill, faBoxOpen, faHandshake} from '@fortawesome/free-solid-svg-icons';
 
 const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -12,10 +12,11 @@ const Sidebar = () => {
   };
 
   return (
-      <div className={`sidebar ${isCollapsed ? 'collapsed' : ''}`}>
-        <div className="sidebar-logo">
-          <img src={logo} alt="Logo" />
+    <div className={`sidebar ${isCollapsed ? 'collapsed' : ''}`}>
+        <div className="toggle-button" onClick={toggleSidebar}>
+          {isCollapsed ? '>>' : '<<'}
         </div>
+          {!isCollapsed && <div className="sidebar-logo"><img src={logo}/></div>}
         <div className="sidebar-menu">
           <div className="menu-item">
               <FontAwesomeIcon icon={faTrophy} />
@@ -34,10 +35,7 @@ const Sidebar = () => {
             {!isCollapsed && <span>Logística</span>}
           </div>
         </div>
-        <div className="sidebar-toggle-indicator" onClick={toggleSidebar}>
-          {isCollapsed ? {faArrowRight} : {faArrowLeft}}
-        </div>
-      </div>
+    </div>
   );
 };
 

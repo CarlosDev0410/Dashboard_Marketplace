@@ -29,15 +29,13 @@
   padding: 20px 20px;
   transition: all 0.3s ease;
   cursor: pointer;
+  border-radius: 3px;
+  gap: 10px;
 }
 
 .menu-item:hover {
   background-color: #ffffff;
   color: #000000;
-}
-
-.menu-item span {
-  margin-left: 10px;
 }
 
 .sidebar-button {
@@ -62,7 +60,7 @@
   width: 70px;
 }
 
-.sidebar-toggle-indicator {
+.toggle-button {
   position: absolute;
   top: 50%;
   right: -25px; /* Ajuste a posição à direita */
@@ -82,7 +80,7 @@
   transition: transform 0.3s ease;
 }
 
-.sidebar.collapsed .sidebar-toggle-indicator {
+.sidebar.collapsed .toggle-button {
   transform: translateY(-50%);
   display: flex;
   align-items: center;
