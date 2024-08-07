@@ -8,6 +8,8 @@
   align-items: center;
   padding-top: 20px;
   transition: width 0.3s ease;
+  color: #ffffff;
+  font-size: 20px;
 }
 
 .sidebar-logo img {
@@ -20,11 +22,22 @@
   margin-bottom: 30px;
 }
 
-.sidebar-menu {
-  display: flex;
-  flex-direction: column;
+.menu-item {
   width: 100%;
+  display: flex;
   align-items: center;
+  padding: 20px 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.menu-item span {
+  margin-left: 10px;
 }
 
 .sidebar-button {
@@ -73,7 +86,6 @@
   transform: translateY(-50%);
   display: flex;
   align-items: center;
-  
 }
 
 
